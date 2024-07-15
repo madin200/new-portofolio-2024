@@ -185,3 +185,38 @@ header .contact a:hover {
   }
 }
 /* header end */
+
+/* hero start */
+.hero {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  box-sizing: border-box;
+}
+
+.hero .motto {
+  width: 20vw;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.hero .motto li span {
+  font-size: 60px;
+}
+
+.hero .separator {
+  width: 1vw;
+  background-color: #1bfe00;
+  border-radius: 0.5vw;
+}
+.hero .card {
+  width: 20vw;
+  padding: 6vh;
+  margin-left: 20px;
+  background-color: white;
+  text-wrap: wrap;
+  align-self: center;
+  box-sizing: border-box;
+}
