@@ -192,18 +192,18 @@ header .contact a:hover {
   margin-bottom: 20vh;
   display: flex;
   justify-content: center;
-  height: 20vh;
+  height: auto;
   box-sizing: border-box;
 }
 
 .hero .motto {
-  width: 20vw;
+  width: 25vw;
   text-align: right;
   margin-right: 20px;
 }
 
 .hero .motto li span {
-  font-size: 60px;
+  font-size: 80px;
 }
 
 .hero .separator {
@@ -211,12 +211,86 @@ header .contact a:hover {
   background-color: #1bfe00;
   border-radius: 0.5vw;
 }
-.hero .card {
-  width: 20vw;
-  padding: 6vh;
+/* .hero .card {
   margin-left: 20px;
   background-color: white;
-  text-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "pict pict-name pict-name"
+    "pict pict-desc pict-desc";
+
+  justify-content: start;
+  align-content: space-evenly;
+  border-radius: 25px;
+  border: 3px solid #333;
+}
+
+.card .profile-pic {
   align-self: center;
+  grid-area: pict;
+}
+
+.card .profile-pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .pict-name {
+  grid-area: pict-name;
+  align-self: end;
+  padding-left: 10px;
+}
+
+.card .pict-name span {
+  font-size: 30px;
+}
+
+.card .pict-desc {
+  grid-area: pict-desc;
+  padding-left: 10px;
+} */
+
+.grid-example {
+  margin-left: 20px;
+  width: 25vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "box1 box2"
+    "box1 box3";
+  background-color: white;
+  border: 2px solid #333;
   box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.grid-example .box1 {
+  grid-area: box1;
+}
+.grid-example .box1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 13px 0px 0px 13px;
+}
+.grid-example .box2 {
+  grid-area: box2;
+  align-self: end;
+  margin-left: 10px;
+  margin-bottom: 3px;
+  font-size: 20px;
+}
+
+.grid-example .box3 {
+  grid-area: box3;
+  align-self: start;
+  margin-left: 10px;
+  margin-top: 3px;
+  font-size: 14px;
+  text-align: left;
+  word-spacing: 5px;
 }
