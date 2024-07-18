@@ -133,14 +133,14 @@ table {
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
-  background-color: #999;
+  /* background-color: #999; */
 }
 
 header {
   display: flex;
   justify-content: space-between;
   height: 10vh;
-  background-color: white;
+  background-color: #666;
   align-items: center;
 }
 
@@ -188,74 +188,40 @@ header .contact a:hover {
 
 /* hero start */
 .hero {
-  margin-top: 20vh;
-  margin-bottom: 20vh;
+  background-image: url(/img/hero-background.jpg);
+  height: 80vh;
+  background-size: cover;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.hero .hero-content {
+  background-size: cover;
   height: auto;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
 }
 
-.hero .motto {
+.hero-content .motto {
   width: 25vw;
   text-align: right;
   margin-right: 20px;
 }
 
-.hero .motto li span {
+.hero-content .motto li span {
   font-size: 80px;
 }
 
-.hero .separator {
+.hero-content .separator {
   width: 1vw;
   background-color: #1bfe00;
   border-radius: 0.5vw;
 }
-/* .hero .card {
+
+.card {
   margin-left: 20px;
-  background-color: white;
-  display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas:
-    "pict pict-name pict-name"
-    "pict pict-desc pict-desc";
-
-  justify-content: start;
-  align-content: space-evenly;
-  border-radius: 25px;
-  border: 3px solid #333;
-}
-
-.card .profile-pic {
-  align-self: center;
-  grid-area: pict;
-}
-
-.card .profile-pic img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card .pict-name {
-  grid-area: pict-name;
-  align-self: end;
-  padding-left: 10px;
-}
-
-.card .pict-name span {
-  font-size: 30px;
-}
-
-.card .pict-desc {
-  grid-area: pict-desc;
-  padding-left: 10px;
-} */
-
-.grid-example {
-  margin-left: 20px;
-  width: 25vw;
+  width: 30vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -268,16 +234,16 @@ header .contact a:hover {
   border-radius: 15px;
 }
 
-.grid-example .box1 {
+.card .box1 {
   grid-area: box1;
 }
-.grid-example .box1 img {
+.card .box1 img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 13px 0px 0px 13px;
 }
-.grid-example .box2 {
+.card .box2 {
   grid-area: box2;
   align-self: end;
   margin-left: 10px;
@@ -285,7 +251,7 @@ header .contact a:hover {
   font-size: 20px;
 }
 
-.grid-example .box3 {
+.card .box3 {
   grid-area: box3;
   align-self: start;
   margin-left: 10px;
@@ -293,4 +259,57 @@ header .contact a:hover {
   font-size: 14px;
   text-align: left;
   word-spacing: 5px;
+}
+
+/* responsive */
+@media (max-width: 800px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-content .separator {
+    width: auto;
+    height: 1vh;
+    background-color: #1bfe00;
+    border-radius: 0.5vw;
+  }
+  .hero-content .motto {
+    margin-bottom: 20px;
+  }
+  .hero-content .card {
+    margin-top: 20px;
+    margin-left: -5px;
+    width: 60vw;
+    height: auto;
+    display: inline;
+  }
+  .card .box1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 13px 13px 0px 0px;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-content .separator {
+    width: 100vw;
+    height: 1vh;
+    background-color: #1bfe00;
+    border-radius: 0.5vw;
+  }
+  .hero-content .motto {
+    margin-bottom: 20px;
+  }
+  .hero-content .card {
+    margin-top: 20px;
+    margin-left: -5px;
+    width: 60vw;
+    height: auto;
+    display: inline;
+  }
 }
