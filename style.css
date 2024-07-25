@@ -1,377 +1,42 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
-/* batas css reset */
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
-  background-color: #666;
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  height: 10vh;
+  align-items: center;
+  height: 5em;
   background-color: #666;
-  align-items: center;
-}
-
-header .greet {
-  box-sizing: border-box;
-  font-size: 30px;
-  color: white;
-  letter-spacing: 2px;
-  background-color: #1bfe00;
-}
-
-header .greet span {
-  background-color: #333;
-  padding: 3.1vh;
-}
-
-header .contact {
-  box-sizing: border-box;
-  padding: 3.3vh;
-  background-color: #1bfe00;
-}
-
-header .contact a {
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
-  letter-spacing: 2px;
-}
-
-header .contact a:hover {
-  color: black;
-  animation: textFade 0.2s ease-in-out;
-}
-
-@keyframes textFade {
-  0% {
-    color: white;
-    text-shadow: -4px 0px #5717e8, 4px 0px #e85717;
-  }
-  100% {
-    color: #d52a2f;
-  }
-}
-/* header end */
-
-/* hero start */
-.hero {
-  background-image: url(/img/hero-background.jpg);
-  background-position: center;
-  background-size: cover;
-  width: calc(100% * (1920px / 1078px));
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hero .hero-content {
-  background-size: cover;
-  height: auto;
-  display: flex;
-  justify-content: center;
   box-sizing: border-box;
 }
 
-.hero-content .motto {
-  width: 25vw;
-  text-align: right;
-  margin-right: 20px;
-}
-
-.hero-content .motto li span {
-  font-size: 80px;
-}
-
-.hero-content .separator {
-  width: 1vw;
-  background-color: #1bfe00;
-  border-radius: 0.5vw;
-}
-
-.card {
-  margin-left: 20px;
-  width: 30vw;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas:
-    "box1 box2"
-    "box1 box3";
-  background-color: white;
-  border: 2px solid #333;
-  box-sizing: border-box;
-  border-radius: 15px;
-}
-
-.card .box1 {
-  grid-area: box1;
-}
-.card .box1 img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 13px 0px 0px 13px;
-}
-.card .box2 {
-  grid-area: box2;
-  align-self: end;
-  margin-left: 10px;
-  margin-bottom: 3px;
-  font-size: 20px;
-}
-
-.card .box3 {
-  grid-area: box3;
-  align-self: start;
-  margin-left: 10px;
-  margin-top: 3px;
-  font-size: 14px;
-  text-align: left;
-  word-spacing: 5px;
-}
-
-/* project card start */
-.project {
-  display: flex;
-  justify-content: space-evenly;
-}
-.project-card {
-  display: grid;
-  width: 100%;
-  max-width: 500px;
-  grid-template-areas:
-    "project-image"
-    "project-title"
-    "project-desc";
-  grid-template-rows: repeat(3, auto-fit);
-  background-color: darkseagreen;
-  border: 2px solid #333;
-  border-radius: 15px;
-}
-
-.project-card .project-image {
-  grid-area: project-image;
-}
-.project-card .project-image img {
-  display: block;
-  width: 100%;
-  border-radius: 15px;
-  border-bottom: 2px solid #333;
-  object-fit: cover;
-}
-.project-card .project-title {
-  grid-area: project-title;
+header .logo span {
+  padding: 10px;
   font-size: 50px;
-  box-sizing: border-box;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: white;
+  background-color: #333;
 }
 
-.project-card .project-title span {
-  padding: 10px;
-}
-.project-card .project-desc {
-  grid-area: project-desc;
-  box-sizing: border-box;
-}
-.project-card .project-desc p {
-  padding: 10px;
-}
-/* responsive */
-@media (max-width: 600px) {
-  .hero-content {
-    flex-direction: column;
-  }
-
-  .hero-content .separator {
-    width: auto;
-    height: 1vh;
-    background-color: #1bfe00;
-    border-radius: 0.5vw;
-  }
-  .hero-content .motto {
-    margin-bottom: 20px;
-  }
-  .hero-content .card {
-    margin-top: 20px;
-    margin-left: -5px;
-    width: 60vw;
-    height: auto;
-    display: inline;
-  }
-  .card .box1 img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 13px 13px 0px 0px;
-  }
-
-  .project {
-    flex-direction: column;
-  }
-
-  .project-card {
-    margin-top: 50px;
-    width: 80%;
-    max-width: 400px;
-  }
-
-  .project-card .project-image img {
-    width: 80%;
-    height: auto;
-  }
+nav ul {
+  padding: 22px 20px;
+  background-color: #333;
 }
 
-@media (max-width: 350px) {
-  .hero-content {
-    flex-direction: column;
-  }
+nav ul li {
+  display: inline;
+}
 
-  .hero-content .separator {
-    width: 100vw;
-    height: 1vh;
-    background-color: #1bfe00;
-    border-radius: 0.5vw;
-  }
-  .hero-content .motto {
-    margin-bottom: 20px;
-  }
-  .hero-content .card {
-    margin-top: 20px;
-    margin-left: -5px;
-    width: 60vw;
-    height: auto;
-    display: inline;
-  }
+nav ul li a {
+  font-size: 30px;
+  color: white;
+  padding-left: 30px;
+  text-decoration: none;
 }
