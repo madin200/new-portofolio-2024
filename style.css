@@ -53,6 +53,37 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #ffff00;
 }
+
+.hero {
+  background-image: url(/img/hero-background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: calc(100vw * (1920 / 1078));
+  position: relative;
+}
+
+.hero .side-card {
+  position: absolute;
+  left: 30vw;
+  top: 15vh;
+}
+
+.hero .side-card .card-img {
+  background-color: white;
+  width: 600px;
+  height: 220px;
+  position: relative;
+  border-radius: 110px;
+}
+
+.hero .side-card .card-img img {
+  position: absolute;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+
 /* responsive */
 @media (max-width: 600px) {
   header {
@@ -86,5 +117,9 @@ header nav ul li a:hover {
     display: block;
     width: 90vw;
     border-bottom: 5px solid white;
+  }
+
+  .hero .side-card .card-img {
+    width: 400px;
   }
 }
