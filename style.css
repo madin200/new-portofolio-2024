@@ -1,125 +1,163 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
-body {
-  font-family: "Sofia Sans Extra Condensed", sans-serif;
-  color: #333;
+.content {
+  font-family: "Rajdhani", sans-serif;
+  display: grid;
+  grid-template-columns: 10vw 90vw;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "aside main"
+    "footer footer";
 }
-
 header {
-  box-sizing: border-box;
-  height: 6em;
-  width: 100%;
-  background-color: #333;
+  grid-area: header;
+  width: 100vw;
+  height: 50vh;
+  background-image: url(img/hero-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.header .logo {
-  position: relative;
-}
-
-header .logo img {
-  display: none;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-
-header .logo span {
-  padding: 20px;
-  font-size: 30px;
-  font-weight: bold;
+header .logo h3 {
+  padding: 0px 20px 0px 20px;
   color: white;
-  text-shadow: 0px 2px 0px #999;
+  font-size: calc(3rem + 1vw);
+  filter: drop-shadow(0px 0px 20px black);
+  text-shadow: 2px 2px black, -2px -2px #333;
 }
 
-header nav ul li {
-  box-sizing: border-box;
-  display: inline;
-  padding: 20px;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  list-style: none;
-  color: white;
-  font-size: 25px;
-}
-
-header nav ul li a:hover {
-  color: #ffff00;
-}
-
-.hero {
-  background-image: url(/img/hero-background.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 60vh;
-  width: calc(100vw * (1920 / 1078));
-  position: relative;
-}
-
-.hero .side-card {
-  position: absolute;
-  left: 30vw;
-  top: 15vh;
-}
-
-.hero .side-card .card-img {
+header .card {
+  display: flex;
+  width: 400px;
+  height: 110px;
+  border-radius: 100px;
   background-color: white;
-  width: 600px;
-  height: 220px;
-  position: relative;
-  border-radius: 110px;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.hero .side-card .card-img img {
-  position: absolute;
-  border-radius: 50%;
-  top: 10px;
-  left: 10px;
+header .card .card-img {
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+header .card .card-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  width: 100vw;
+  height: 8vh;
+  background-color: black;
+  align-items: center;
+  justify-content: right;
+}
+
+nav ul {
+  padding-left: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  font-size: 1.5em;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: #333;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+aside ul {
+  list-style-type: none;
+}
+
+aside ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+aside ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+main {
+  width: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  grid-area: main;
+  color: #333;
+  box-sizing: border-box;
+  border-left: 3px solid black;
+  text-indent: 20px;
+}
+
+main h3 {
+  font-size: 50px;
+}
+
+main p {
+  color: #333;
+  padding-left: 20px;
+  text-align: justify;
+}
+
+footer {
+  padding: 20px;
+  background-color: #666;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+}
+
+footer span {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 1;
 }
 
 /* responsive */
 @media (max-width: 600px) {
-  header {
-    box-sizing: border-box;
-    display: block;
-    text-align: center;
-    height: auto;
-  }
-
-  header .logo {
-    padding: 30px 30px 30px 0px;
-    text-align: left;
-  }
-
-  header .logo img {
-    display: block;
-    right: 20px;
-    top: 35px;
-  }
-
-  header nav {
+  nav ul {
     display: none;
-    box-sizing: border-box;
+  }
+}
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
   }
 
-  .show-menu {
-    display: inline-block;
-  }
-
-  header nav ul li {
-    display: block;
-    width: 90vw;
-    border-bottom: 5px solid white;
-  }
-
-  .hero .side-card .card-img {
-    width: 400px;
+  header {
+    flex-direction: column;
   }
 }
